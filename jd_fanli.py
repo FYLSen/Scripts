@@ -8,6 +8,7 @@ cron:
 46 9 * * * jd_fanli.py
 """
 
+import sys
 import os
 import time
 import re
@@ -69,7 +70,8 @@ def getTaskFinishCount(ck):
     url = "https://ifanli.m.jd.com/rebateapi/task/getTaskFinishCount"
     headers = getheader(ck)
     r = requests.get(url, headers=headers, proxies=proxies)
-    printf('已完成任务次数：', r.json()["content"]["finishCount"], '总任务次数：', r.json()["content"]["maxTaskCount"])
+    printf(
+        '已完成任务次数：' + str(r.json()["content"]["finishCount"]) + '   总任务次数：' + str(r.json()["content"]["maxTaskCount"]))
     return r.json()["content"]
 
 
@@ -93,7 +95,12 @@ def saveTaskRecord1(ck, taskId, uid, tt):
 
 
 if __name__ == '__main__':
-    cks = os.environ["JD_COOKIE"].split("&")
+    try:
+        cks = os.environ["JD_COOKIE"].split("&")
+    except:
+        f = open("/jd/config/config.sh", "r", encoding='utf-8')
+        cks = re.findall(r'Cookie[0-9]*="(pt_key=.*?;pt_pin=.*?;)"', f.read())
+        f.close()
     for ck in cks:
         ptpin = re.findall(r"pt_pin=(.*?);", ck)[0]
         printf("--------开始京东账号" + ptpin + "--------")
