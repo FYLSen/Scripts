@@ -1648,7 +1648,7 @@ const randomCount = $.isNode() ? 20 : 5;
 let tuanActiveId = ``, hasSend = false;
 const jxOpenUrl = `openjd://virtual?params=%7B%20%22category%22:%20%22jump%22,%20%22des%22:%20%22m%22,%20%22url%22:%20%22https://wqsd.jd.com/pingou/dream_factory/index.html%22%20%7D`;
 let cookiesArr = [], cookie = '', message = '', allMessage = '';
-const inviteCodes = [''];
+const inviteCodes = ['XU6GKz30yCKA4LYvpnm5zw==@NTXGxnRwTQkr7rbDn08j4w==@q0aZPe-QA6AChOBXOoOMBA==@60y72tM8PjtxKeL4EMpTOQ==@J9Xl0ITTjl0-8QxxTj1fwQ==@TqIiJFACVwWUmovQes7F6g==@bmHS94glNAEU9WMavLn_og==@QDotuqdYVNrSa3atJZ_V9Q==@yn0ZjWK6NwsvEjIQjHUKGg==@V5M2S-SK8-rfSK6SxIxiqw==@Mzyy76C0ZYpK3jgJrVL-gg=='];
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
 $.tuanIds = [];
 $.appId = 10001;
@@ -3010,7 +3010,7 @@ function shareCodesFormat() {
     }
     const readShareCodeRes = await readShareCode();
     if (readShareCodeRes && readShareCodeRes.code === 200) {
-      $.newShareCodes = [...new Set([...$.newShareCodes, ...(readShareCodeRes.data || [])])];
+      //$.newShareCodes = [...new Set([...$.newShareCodes, ...(readShareCodeRes.data || [])])];
     }
     console.log(`第${$.index}个京东账号将要助力的好友${JSON.stringify($.newShareCodes)}`)
     resolve();
