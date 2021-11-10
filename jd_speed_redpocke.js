@@ -19,7 +19,7 @@ if ($.isNode()) {
 }
 
 const JD_API_HOST = 'https://api.m.jd.com/api';
-const LinkIdlist = ['9wdf1YTT2L59Vr-meKskLA','7ya6o83WSbNhrbYJqsMfFA'];
+const LinkIdlist = ['7ya6o83WSbNhrbYJqsMfFA'];
 let LinkId = '';
 var message = '';
 let inviterList = ['3WlavFVGOr8QELUtF3sPxzCZD5Noz6TYY3Huko2VPow', 'IM1x7kvuw_5EvxHHlV5hS7lx7cjhj1rUFjbsvXxbbag', 'xkGccBO_aV2IsgD3t-camg'];
@@ -381,7 +381,7 @@ function signPostUrl(function_id, body) {
         "Cookie": cookie,
         "Connection": "keep-alive",
         "Accept": "application/json, text/plain, */*",
-        "User-Agent": "jdltapp;iPhone;3.3.8;14.5.1;network/wifi;hasUPPay/0;pushNoticeIsOpen/1;lang/zh_CN;model/iPhone13,4;addressid/2821783337;hasOCPay/0;appBuild/1063;supportBestPay/0;pv/138.5;apprpd/MyJD_Main;ref/https%3A%2F%2Fdaily-redpacket.jd.com%2F%3FactivityId%3D9WA12jYGulArzWS7vcrwhw%26channel%3Dwojing%26lng%3D114.479631%26lat%3D38.043518%26sid%3Dec4e5bc34c9daf3a147af528de30d14w%26un_area%3D5_142_42544_60039;psq/7;ads/;psn/ea619eb0a5f1e66613851aed4763fd3efb677bcd|273;jdv/0|kong|t_1000170135|tuiguang|notset|1621323085987|1621323085;adk/;app_device/IOS;pap/JA2020_3112531|3.3.8|IOS 14.5.1;Mozilla/5.0 (iPhone; CPU iPhone OS 14_5_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1",
+        "User-Agent": "jdltapp;iPhone;3.7.6;;;M/5.0;hasUPPay/0;pushNoticeIsOpen/1;lang/zh_CN;hasOCPay/0;appBuild/1095;supportBestPay/0;jdSupportDarkMode/0;ef/1;ep/%7B%22ciphertype%22%3A5%2C%22cipher%22%3A%7B%22ud%22%3A%22ZWO2CJvvYtLrDWYnZJY2DtOzENUnYWVuDNc2C2ZuC2VwYtY3D2TtZK%3D%3D%22%2C%22sv%22%3A%22CJUkCG%3D%3D%22%2C%22iad%22%3A%22%22%7D%2C%22ts%22%3A1636557021%2C%22hdid%22%3A%22C5kcN3XI2l4%2BFnMAmey95fl8hzY3VCieHjqysgQi3QQ%3D%22%2C%22version%22%3A%221.0.3%22%2C%22appname%22%3A%22com.jd.jdmobilelite%22%2C%22ridx%22%3A1%7D;Mozilla/5.0 (iPhone; CPU iPhone OS 15_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1;",
         "Referer": "https://daily-redpacket.jd.com/?activityId=9WA12jYGulArzWS7vcrwhw",
         //"Content-Length": "274",
         "Accept-Language": "zh-cn"
