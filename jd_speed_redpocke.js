@@ -59,7 +59,7 @@ const ServiceName2 = 'dayDaySignGetRedEnvelopeSignService';
                 await speedRedPacket();
             }
 
-            await speedSignIn();
+            //await speedSignIn();
             await showMsg();
         }
     }
