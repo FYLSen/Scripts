@@ -71,7 +71,7 @@ if ($.isNode()) {
         console.log('\n脚本早上9点到10点直接执行，才会执行账号内互助');
         return ;
     }
-    if (flag_hb) {
+    if (process.env.JXMC_RP != 'false' && flag_hb) {
         console.log('\n##################开始账号内互助(红包)#################\n');
         await getShareCode('jxmc_hb.json')
         //$.inviteCodeList_rp = [...($.inviteCodeList_rp || []), ...($.shareCode || [])]
@@ -497,7 +497,7 @@ async function doMotion(petidList){
         console.log(`开始第${i + 1}次割草`);
         let mowingInfo = await takeRequest(`jxmc`,`operservice/Action`,`&type=2`,'activeid%2Cactivekey%2Cchannel%2Cjxmc_jstoken%2Cphoneid%2Csceneid%2Ctimestamp%2Ctype',true);
         console.log(`获得金币：${mowingInfo.addcoins || 0}`);
-        await $.wait(2000);
+        await $.wait(3000);
         if(Number(mowingInfo.addcoins) >0 ){
             runFlag = true;
         }else{
@@ -527,7 +527,7 @@ async function doMotion(petidList){
             runFlag = false;
             console.log(`未获得金币暂停割鸡腿`);
         }
-        await $.wait(2000);
+        await $.wait(3000);
     }
 }
 async function doTask(){
