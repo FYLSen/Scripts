@@ -1591,7 +1591,7 @@ const JD_API_HOST = 'https://m.jingxi.com';
 const notify = $.isNode() ? require('./sendNotify') : '';
 const jxOpenUrl = `openjd://virtual?params=%7B%20%22category%22:%20%22jump%22,%20%22des%22:%20%22m%22,%20%22url%22:%20%22https://wqsd.jd.com/pingou/dream_factory/index.html%22%20%7D`;
 let cookiesArr = [], cookie = '', message = '', allMessage = '';
-const inviteCodes = [''];
+const inviteCodes = ['XU6GKz30yCKA4LYvpnm5zw==@NTXGxnRwTQkr7rbDn08j4w==@q0aZPe-QA6AChOBXOoOMBA==@60y72tM8PjtxKeL4EMpTOQ==@J9Xl0ITTjl0-8QxxTj1fwQ==@TqIiJFACVwWUmovQes7F6g==@bmHS94glNAEU9WMavLn_og==@QDotuqdYVNrSa3atJZ_V9Q==@yn0ZjWK6NwsvEjIQjHUKGg==@V5M2S-SK8-rfSK6SxIxiqw==@Mzyy76C0ZYpK3jgJrVL-gg=='];
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
 let HELP_HW = 'true';
 $.tuanIds = [];
